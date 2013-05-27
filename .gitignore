@@ -9,3 +9,5 @@ build
 src
 node_modules
 components
+*.db
+*_public/
