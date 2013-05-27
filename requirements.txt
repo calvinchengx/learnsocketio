@@ -1,6 +1,8 @@
 Cython==0.19.1
 Django==1.5.1
 -e git://github.com/surfly/gevent.git@b3a9ff1faf44015c672892aee07d08c7f7b85dcb#egg=gevent-dev
+-e git://github.com/abourget/gevent-socketio.git@aeece7038b0052ddf6b4228857e4d7a67a6242f2#egg=gevent_socketio-dev
+gevent-websocket==0.3.6
 greenlet==0.4.0
 nodeenv==0.6.6
 wsgiref==0.1.2
