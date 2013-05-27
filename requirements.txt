@@ -1,0 +1,6 @@
+Cython==0.19.1
+Django==1.5.1
+-e git://github.com/surfly/gevent.git@b3a9ff1faf44015c672892aee07d08c7f7b85dcb#egg=gevent-dev
+greenlet==0.4.0
+nodeenv==0.6.6
+wsgiref==0.1.2
