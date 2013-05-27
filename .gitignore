@@ -7,3 +7,5 @@
 .DS_Store
 build
 src
+node_modules
+components
