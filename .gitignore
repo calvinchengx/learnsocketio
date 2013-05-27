@@ -1,0 +1,9 @@
+.project
+.pydevproject
+*.pyc
+.*.s[a-w][a-z]
+.sw*
+*.bak
+.DS_Store
+build
+src
