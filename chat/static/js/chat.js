@@ -50,7 +50,7 @@ $(function () {
     });
 
     $('#send-message').submit(function () {
-		message('me', $('#message').val());
+		//message('me', "Fake it first: " + $('#message').val());
 		socket.emit('user message', $('#message').val());
 		clear();
 		$('#lines').get(0).scrollTop = 10000000;
