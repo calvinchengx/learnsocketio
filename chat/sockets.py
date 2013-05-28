@@ -55,8 +55,10 @@ class ChatNamespace(BaseNamespace, LonelyRoomMixin, BroadcastMixin):
         return True
 
     def on_nickname(self, nickname):
+        print("Creating the nickname: " + nickname)
         self.log('Nickname: {0}'.format(nickname))
         self.socket.session['nickname'] = nickname
+        self.nicknames.append(nickname)
         self.broadcast_event('announcement', '%s has connected' % nickname)
         self.broadcast_event('nicknames', self.nicknames)
         return True, nickname
