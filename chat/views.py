@@ -21,7 +21,8 @@ def room(request, slug, template="room.html"):
     Show a room
     """
     #context = {"room": get_object_or_404(ChatRoom, slug=slug)}
-    if not request.session["has_session"]:
+
+    if not request.session.get("has_session"):
         request.session["has_session"] = True
 
     room = request.session.session_key
