@@ -2,7 +2,7 @@
 
 #from django.http import HttpResponse
 #from django.contrib.auth.decorators import user_passes_test
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 
 from chat.models import ChatRoom
 #from chat.sockets import ChatNameSpace
@@ -20,12 +20,7 @@ def room(request, slug, template="room.html"):
     """
     Show a room
     """
-    #context = {"room": get_object_or_404(ChatRoom, slug=slug)}
-    if not request.session["has_session"]:
-        request.session["has_session"] = True
-
-    room = request.session.session_key
-    context = {"room": room}
+    context = {"room": get_object_or_404(ChatRoom, slug=slug)}
     return render(request, template, context)
 
 
